@@ -12,7 +12,8 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon index.js"
+    "heroku-postbuild": "cd frontend && npm install && npm run build",
+    "start": "node index.js"
   },
   "author": "Aymen Ouerghui",
   "license": "ISC"
