@@ -33,12 +33,7 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 app.use("/api/pins",pinRoute);
 app.use("/api/users",userRoute);
 
-app.use(express.static(path.join(__dirname, "/frontend/build")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
-});
-
-app.listen(process.env.PORT || 8800, () =>{
+app.listen( 8800, () =>{
     console.log("server is running!");
 })
